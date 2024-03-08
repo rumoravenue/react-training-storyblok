@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-const Navigation = ({ locales, locale, defaultLocale }) => {
+const Navigation = ({ locales, locale }) => {
   const router = useRouter();
 
   const [openMenu, setOpenMenu] = useState(false);
