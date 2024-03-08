@@ -1,13 +1,16 @@
-import Navigation from "./Navigation";
-import Footer from "./Footer";
+import Navigation from './Navigation';
+import Footer from './Footer';
 
 const Layout = ({ children, locale, locales, defaultLocale }) => (
   <div>
-    <Navigation locales={locales} locale={locale} defaultLocale={defaultLocale}
+    <Navigation
+      locales={locales}
+      locale={locale}
+      defaultLocale={defaultLocale}
     />
     {children}
     <Footer />
   </div>
 );
 
-export default Layout
+export default Layout;

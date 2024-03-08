@@ -1,9 +1,9 @@
-import "../styles/globals.css";
-import { storyblokInit, apiPlugin } from "@storyblok/react";
-import Feature from "../components/Feature";
-import Grid from "../components/Grid";
-import Page from "../components/Page";
-import Teaser from "../components/Teaser";
+import '../styles/globals.css';
+import { storyblokInit, apiPlugin } from '@storyblok/react';
+import Feature from '../components/Feature';
+import Grid from '../components/Grid';
+import Page from '../components/Page';
+import Teaser from '../components/Teaser';
 
 const components = {
   feature: Feature,
@@ -13,12 +13,12 @@ const components = {
 };
 
 storyblokInit({
-  accessToken: "kQDhuHseivSQAbObeBI8zwtt",
+  accessToken: 'kQDhuHseivSQAbObeBI8zwtt',
   use: [apiPlugin],
   components,
   apiOptions: {
-    region: ''
-  }
+    region: '',
+  },
 });
 
 function MyApp({ Component, pageProps }) {
