@@ -7,7 +7,7 @@ import {
   ISbStoriesParams,
 } from '@storyblok/react';
 
-export default function Page({ story, locales, locale, defaultLocale }) {
+export default function Page({ story, locales, locale }) {
   story = useStoryblokState(story, {
     language: locale,
   });
@@ -17,7 +17,7 @@ export default function Page({ story, locales, locale, defaultLocale }) {
         <title>{story ? story.name : 'My Site'}</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Layout locales={locales} locale={locale} defaultLocale={defaultLocale}>
+      <Layout locales={locales} locale={locale}>
         <StoryblokComponent blok={story.content} locale={locale} />
       </Layout>
     </div>

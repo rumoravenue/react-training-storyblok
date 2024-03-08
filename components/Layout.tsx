@@ -1,13 +1,9 @@
 import Navigation from './Navigation';
 import Footer from './Footer';
 
-const Layout = ({ children, locale, locales, defaultLocale }) => (
+const Layout = ({ children, locale, locales }) => (
   <div>
-    <Navigation
-      locales={locales}
-      locale={locale}
-      defaultLocale={defaultLocale}
-    />
+    <Navigation locales={locales} locale={locale} />
     {children}
     <Footer />
   </div>
