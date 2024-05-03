@@ -4,16 +4,18 @@ import Feature from '../components/Feature';
 import Grid from '../components/Grid';
 import Page from '../components/Page';
 import Teaser from '../components/Teaser';
+import Text from '../components/Text';
 
 const components = {
   feature: Feature,
   grid: Grid,
   teaser: Teaser,
   page: Page,
+  text: Text,
 };
 
 storyblokInit({
-  accessToken: 'kQDhuHseivSQAbObeBI8zwtt',
+  accessToken: 'uWoJ96uMbI1FmMmaRPzULgtt',
   use: [apiPlugin],
   components,
   apiOptions: {

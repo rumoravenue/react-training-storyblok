@@ -64,7 +64,7 @@ export async function getStaticPaths({ locales }) {
     const slug = data.links[linkKey].slug;
     let splittedSlug = slug.split('/');
 
-    for (const locale of locales) {
+    for (const locale of locales || []) {
       paths.push({ params: { slug: splittedSlug }, locale });
     }
   });
