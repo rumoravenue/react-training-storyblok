@@ -5,6 +5,7 @@ import Grid from '../components/Grid';
 import Page from '../components/Page';
 import Teaser from '../components/Teaser';
 import Text from '../components/Text';
+import BlogPost from '../components/BlogPost';
 
 const components = {
   feature: Feature,
@@ -12,6 +13,7 @@ const components = {
   teaser: Teaser,
   page: Page,
   text: Text,
+  blogPost: BlogPost,
 };
 
 storyblokInit({
