@@ -15,7 +15,7 @@ interface IProps {
 }
 
 const BlogPost: React.FC<IProps> = ({ blok }) => (
-  <main className='mt-4 text-center' {...storyblokEditable(blok)}>
+  <main className='mt-4   text-center' {...storyblokEditable(blok)}>
     <img src={blok.media.filename} />
     <h1>{blok.title}</h1>
     <p>{blok.author.name}</p>

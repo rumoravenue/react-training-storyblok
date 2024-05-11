@@ -32,6 +32,7 @@ export async function getStaticProps({
   preview,
 }) {
   let slug = params.slug ? params.slug.join('/') : 'home';
+
   let sbParams: ISbStoriesParams = {
     version: preview ? 'draft' : 'published',
     language: locale,
@@ -39,6 +40,7 @@ export async function getStaticProps({
   };
   const storyblokApi = getStoryblokApi();
   let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
+
   return {
     props: {
       locales: locales || [],

@@ -1,7 +1,6 @@
 import { SbBlokData, storyblokEditable } from '@storyblok/react';
 import React, { CSSProperties } from 'react';
 import { Assets } from '../../types';
-import clsx from 'clsx';
 
 interface SBTeaserProps extends SbBlokData {
   headline?: string;
