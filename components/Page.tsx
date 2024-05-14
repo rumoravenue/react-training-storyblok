@@ -6,6 +6,7 @@ const Page = ({ blok }) => (
       <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
     ))}
   </main>
-);
+);    
 
 export default Page;
+  
