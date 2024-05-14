@@ -32,12 +32,15 @@ export async function getStaticProps({
   preview,
 }) {
   let slug = params.slug ? params.slug.join('/') : 'home';
+
   let sbParams: ISbStoriesParams = {
     version: preview ? 'draft' : 'published',
     language: locale,
+    resolve_relations: ['blogPost.author'],
   };
   const storyblokApi = getStoryblokApi();
   let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
+
   return {
     props: {
       locales: locales || [],
@@ -64,7 +67,7 @@ export async function getStaticPaths({ locales }) {
     const slug = data.links[linkKey].slug;
     let splittedSlug = slug.split('/');
 
-    for (const locale of locales) {
+    for (const locale of locales || []) {
       paths.push({ params: { slug: splittedSlug }, locale });
     }
   });
