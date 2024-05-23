@@ -15,7 +15,7 @@
     "format:fix": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
-    "@storyblok/react": "^2.4.7",
+    "@storyblok/react": "^3.0.10",
     "clsx": "^2.1.0",
     "next": "^12.1.0",
     "react": "17.0.2",

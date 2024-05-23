@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "components/Rumor/Rumor.js", "components/Rumor/Navbavr.js"  ],
   "exclude": [
     "node_modules"
   ]

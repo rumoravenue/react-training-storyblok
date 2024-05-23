@@ -7,6 +7,7 @@ import Teaser from '../components/Teaser/Teaser';
 import Text from '../components/Text';
 import BlogPost from '../components/BlogPost';
 import LandingPage from '../components/LandingPage';
+import Rumor from '../components/Rumor/Rumor';
 const components = {
   feature: Feature,
   grid: Grid,
@@ -15,6 +16,7 @@ const components = {
   text: Text,
   blogPost: BlogPost,
   blog: LandingPage,
+  Rumor,
 };
 
 storyblokInit({
