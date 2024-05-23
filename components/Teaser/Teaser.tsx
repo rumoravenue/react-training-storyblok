@@ -2,7 +2,7 @@ import { storyblokEditable } from '@storyblok/react';
 
 const Teaser = ({ blok }) => {
   return (
-    <h2 className='mb-10 text-2xl' {...storyblokEditable(blok)}>
+    <h2 className={`mb-10 py-12 text-2xl`} {...storyblokEditable(blok)}>
       {blok.headline}
     </h2>
   );
