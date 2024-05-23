@@ -1,0 +1,30 @@
+.landing-page {
+  height: 500px;
+  padding-top: 6%;
+}
+
+
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.flex-item {
+  margin: 0 10px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}

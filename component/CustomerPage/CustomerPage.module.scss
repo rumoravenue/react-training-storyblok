@@ -1,0 +1,38 @@
+.customerPage {
+    padding: 5% 5% 2% 5%;
+  
+  }
+  
+  .heading {
+    font-size: 1.3rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
+  }
+  
+  .description1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .description2 {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .processContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 8rem 0rem 8rem;
+    
+  }
+  
+  .processItem {
+    flex: 1;
+    padding: 1rem;
+    margin: 0.5rem;
+    font-size: 60px;
+    font-weight: 600;
+  }
+  

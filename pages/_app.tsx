@@ -7,15 +7,35 @@ import Teaser from '../components/Teaser/Teaser';
 import Text from '../components/Text';
 import BlogPost from '../components/BlogPost';
 import BlogListing from '../components/BlogListing';
+import LandingPage from '../component/LandingPage/LandingPage';
+import Flex from '../components/Flex';
+import Heading from '../components/Heading';
+import AboutPage from '../component/AboutPage/AboutUs';
+import WhyUsItem from '../component/WhyUs/WhyItem';
+import WhyContainer from '../component/WhyUs/WhyContainer';
+import TechnologiesPage from '../component/Technology/Technologies';
+import CustomerPage from '../component/CustomerPage/Custome';
+import FaqPage from '../component/FAQ/FaqPage';
+
 
 const components = {
   feature: Feature,
   grid: Grid,
   teaser: Teaser,
-  page: Page,
+ page: Page,
   text: Text,
   blogPost:BlogPost,
-  blogListing:BlogListing
+  blogListing:BlogListing,
+  landingPage:LandingPage,
+  flex:Flex,
+  
+  heading:Heading,
+  aboutUs:AboutPage,
+  WhyUsItem:WhyUsItem,
+  whyContainer:WhyContainer,
+  technologiesPage:TechnologiesPage,
+  customerReview:CustomerPage,
+  faq:FaqPage
 };
 
 storyblokInit({
@@ -28,6 +48,7 @@ storyblokInit({
 });
 
 function MyApp({ Component, pageProps }) {
+  // console.log(Component,pageProps,"hhhhhhhhhhhhh")
   return <Component {...pageProps} />;
 }
 

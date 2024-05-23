@@ -5,7 +5,7 @@ const Layout = ({ children, locale, locales }) => (
   <div>
     <Navigation locales={locales} locale={locale} />
     {children}
-    <Footer />
+    {/* <Footer /> */}
   </div>
 );
 
