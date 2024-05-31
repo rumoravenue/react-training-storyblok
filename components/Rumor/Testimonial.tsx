@@ -1,44 +1,51 @@
+import { storyblokEditable } from '@storyblok/react';
 import React from 'react';
 
-interface testimonialProps {
-  testimonial: {
-    Title: string;
-    Heading: string;
-    Description: string;
-    CompanyName: string;
-    CustomerName: string;
-    Position: string;
-    Image: {
-      filename: string;
-    };
+interface TestimonialItem {
+  Description: string;
+  Image: { filename: string };
+  CustomerName: string;
+  Position: string;
+  Company_Name: string;
+}
+
+interface TestimonialProps {
+  blok: {
+    body: TestimonialItem[];
   };
 }
 
-const Testimonial: React.FC<testimonialProps> = ({ testimonial }) => {
+const Testimonial: React.FC<TestimonialProps> = ({ blok }) => {
   return (
-    <section className='bg-black p-8 text-white'>
-      <div className='mb-8 text-center'>
-        <h3 className='mb-2 text-base capitalize'>{testimonial?.Title}</h3>
-        <h1 className='mb-4 text-3xl font-semibold'>{testimonial?.Heading}</h1>
-        <p className='mx-auto max-w-2xl'>{testimonial?.Description}</p>
-      </div>
-      <div className='flex items-center justify-center'>
-        <div className='h-16 w-16 overflow-hidden rounded-full border-2 border-gray-300'>
-          <img
-            src={testimonial?.Image.filename}
-            alt='Customer'
-            className='h-full w-full object-cover'
-          />
-        </div>
-        <div className='ml-4 text-center'>
-          <p className='text-lg font-semibold'>{testimonial?.CustomerName}</p>
-          <div className='flex  gap-1 text-sm text-gray-400'>
-            <p>{testimonial?.Position}</p>
-            <p>{testimonial?.CompanyName}</p>
+    <div
+      className='flex flex-col items-center p-4 text-white'
+      {...storyblokEditable(blok)}
+    >
+      {blok.body.map((item, index) => (
+        <div key={index} className='mb-2 max-w-lg'>
+          <div className='my-2 mb-4 text-center'>{item.Description}</div>
+          <div className='flex flex-wrap items-center justify-center'>
+            <div className='mr-4 mb-4 h-11 w-11 overflow-hidden rounded-full'>
+              <img
+                src={item.Image.filename}
+                alt='img'
+                className='h-full w-full rounded-full object-cover'
+              />
+            </div>
+            <div className='flex flex-col'>
+              <div className='mb-2 text-center text-base font-semibold'>
+                <p>{item.CustomerName}</p>
+              </div>
+              <div className='flex justify-center space-x-2 text-sm'>
+                <p>{item.Position}</p>
+                <p>-</p>
+                <p>{item.Company_Name}</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      ))}
+    </div>
   );
 };
 

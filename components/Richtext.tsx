@@ -39,6 +39,7 @@ export const Richtext = ({
   content,
   textAlign,
   textAlignSm,
+
   ...rest
 }: RichtextProps) => {
   return (
