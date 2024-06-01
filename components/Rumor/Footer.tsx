@@ -2,7 +2,6 @@ import { storyblokEditable, StoryblokComponent } from '@storyblok/react';
 import React from 'react';
 
 const Footer = ({ blok }) => {
-  console.log(blok);
   return (
     <div
       className='relative flex min-h-screen w-full justify-center'
