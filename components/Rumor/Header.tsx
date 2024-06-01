@@ -49,7 +49,6 @@ const Header = ({ blok }) => {
           ))}
         </div>
       </div>
-      <hr className='w-full border-[1px] border-white pt-2' />
     </>
   );
 };
