@@ -38,3 +38,29 @@
     margin-top: 0.5rem;
   }
   
+
+  @media screen and (max-width: 768px) {
+    .why-us-item {
+      flex-direction: column;
+    
+    margin: 1rem 1rem;
+    padding: 1rem;
+    border-radius: 1px;
+    text-align: left;
+  
+    }
+  
+    .why-us-item-title {
+      margin-bottom: 3%;
+      flex: 1;
+      
+    }
+
+
+    .why-us-item-content, .why-us-item-title {
+      flex: 1;
+      padding-right: 1rem;
+      padding-left: 1rem;
+    
+    }
+  }

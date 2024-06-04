@@ -13,9 +13,6 @@ const Pagination: React.FC<PaginationProps> = ({ totalPages, currentPage, onPage
         <button
           key={i}
           onClick={() => onPageChange(i + 1)}
-          className={`mx-1 px-3 py-1 rounded ${
-            currentPage === i + 1 ? 'bg-blue-500 text-white' : 'bg-gray-200'
-          }`}
         >
           {i + 1}
         </button>

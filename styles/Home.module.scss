@@ -65,8 +65,15 @@
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-family:
+    Menlo,
+    Monaco,
+    Lucida Console,
+    Liberation Mono,
+    DejaVu Sans Mono,
+    Bitstream Vera Sans Mono,
+    Courier New,
+    monospace;
 }
 
 .grid {
@@ -86,7 +93,9 @@
   text-decoration: none;
   border: 1px solid #eaeaea;
   border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
   width: 45%;
 }
 
@@ -117,5 +126,34 @@
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .smallScreenStyle {
+    padding: 5% 5%;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
+
+.responsive-button {
+  margin-left: var(--padding-value);
+  margin-right: var(--padding-value);
+
+  @media (max-width: 767px) {
+    margin-left: var(--padding-value-small);
+    margin-right: var(--padding-value-small);
   }
 }

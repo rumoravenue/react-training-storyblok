@@ -7,17 +7,27 @@ import Teaser from '../components/Teaser/Teaser';
 import Text from '../components/Text';
 import BlogPost from '../components/BlogPost';
 import BlogListing from '../components/BlogListing';
-import LandingPage from '../component/LandingPage/LandingPage';
+
 import Flex from '../components/Flex';
 import Heading from '../components/Heading';
 import AboutPage from '../component/AboutPage/AboutUs';
 import WhyUsItem from '../component/WhyUs/WhyItem';
-import WhyContainer from '../component/WhyUs/WhyContainer';
-import TechnologiesPage from '../component/Technology/Technologies';
+
 import CustomerPage from '../component/CustomerPage/Custome';
 import FaqPage from '../component/FAQ/FaqPage';
-
-
+import Section from '../components/Section';
+import {TechnologiesItem} from '../component/Technology/TechnologiesItem';
+import Spacer from '../components/Spacer';
+import CustomerItem from '../component/CustomerPage/Custome';
+import ProcessItem from '../component/Technology/ProcessItem';
+import Button from '../components/Button';
+import Line from '../components/Line';
+import { CaseStudyItem } from '../component/CaseStudyItem';
+import Navbar from '../components/Navbar';
+import Testimonial from '../component/Technology/TestimonalItem';
+import Carousel from '../component/Technology/Carousel';
+import Marquee from '../components/Marquee';
+import Footer from '../components/Footers';
 const components = {
   feature: Feature,
   grid: Grid,
@@ -26,16 +36,24 @@ const components = {
   text: Text,
   blogPost:BlogPost,
   blogListing:BlogListing,
-  landingPage:LandingPage,
+  navbar:Navbar,
   flex:Flex,
-  
+  spacer: Spacer,
   heading:Heading,
   aboutUs:AboutPage,
-  WhyUsItem:WhyUsItem,
-  whyContainer:WhyContainer,
-  technologiesPage:TechnologiesPage,
-  customerReview:CustomerPage,
-  faq:FaqPage
+  WhyUsItemCopy:WhyUsItem,
+  carousel: Carousel,
+  testimonial: Testimonial,
+  marquee:Marquee,
+  technologies:TechnologiesItem,
+ footer:Footer,
+  customerItem:CustomerItem,
+  faq:FaqPage,
+  section: Section,
+  processItem:ProcessItem,
+  button:Button,
+  line:Line,
+  casestudyItem:CaseStudyItem
 };
 
 storyblokInit({
@@ -48,7 +66,6 @@ storyblokInit({
 });
 
 function MyApp({ Component, pageProps }) {
-  // console.log(Component,pageProps,"hhhhhhhhhhhhh")
   return <Component {...pageProps} />;
 }
 

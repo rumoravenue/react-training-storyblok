@@ -1,96 +1,16 @@
-// // import React, { CSSProperties } from 'react';
-// // import { SBColor, Heading, Headings, TextAlign } from '../types';
-// // // import { SBColor } from '../types';
-
-// // interface HeadingProps {
-// //   data: {
-// //     text: string;
-// //     color?: SBColor;
-// //     textAlign?: TextAlign;
-// //     padding?: string;
-// //     marginTop?: string;
-// //   };
-// //   tag: keyof Headings;
-// // }
-
-// // const HeadingComponent: React.FC<HeadingProps> = ({ data, tag }) => {
-// //   const { text, color, textAlign, padding, marginTop } = data;
-
-// //   const style: CSSProperties = {};
-// //   if (color) style.color = color.color;
-// //   if (padding) style.padding = padding;
-// //   if (marginTop) style.marginTop = marginTop;
-// //   if (textAlign) style.textAlign = textAlign;
-
-// //   return React.createElement(tag, { style }, text);
-// // };
-
-// // export default HeadingComponent;
-
-
-
-// import { ISbRichtext, SbBlokData, storyblokEditable } from '@storyblok/react';
-// import { SBColor, TextAlign } from '../types';
-// import React from 'react';
-// import { Richtext } from './Richtext';
-
-// interface TextProps extends SbBlokData {
-//   content?: ISbRichtext;
-//   textAlign?: TextAlign;
-//   colour:SBColor
-// }
-
-// interface IProps {
-//   blok: TextProps;
-// }
-//   console.log("hello")
-// const Heading: React.FC<IProps> = ({ blok }) => {
-//     console.log('Content:', blok.content);
-//   console.log('Text Align:', blok.textAlign);
-//   console.log('Colour:', blok.colour);
-//   return (
-    
-//     <Richtext
-//       {...storyblokEditable(blok)}
-//       content={blok.content}
-//       textAlign={blok.textAlign}
-//       textColor={blok.colour}
-      
-//     />
-//   );
-// };
-
-// export default Heading;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import { ISbRichtext, SbBlokData, storyblokEditable } from '@storyblok/react';
-import { SBColor, TextAlign, Headings ,FontSize} from '../types';
 import React from 'react';
 import { Richtext } from './Richtext';
+import { ISbRichtext, SbBlokData, storyblokEditable } from '@storyblok/react';
+import { SBColor, TextAlign, FontSize, FontWeights, Width } from '../types';
 
 interface TextProps extends SbBlokData {
   content?: ISbRichtext;
   textAlign?: TextAlign;
   colour: SBColor;
-  fontSize?:FontSize
-//   headingTag?: keyof JSX.IntrinsicElements; 
+  fontSize?: FontSize;
+  fontweight?: FontWeights;
+  backgroundColour?: SBColor;
+  width?: Width;
 }
 
 interface IProps {
@@ -98,19 +18,29 @@ interface IProps {
 }
 
 const Heading: React.FC<IProps> = ({ blok }) => {
-  
-  
+  const backgroundColor = blok.backgroundColour
+    ? blok.backgroundColour.color
+    : '';
 
+  const paddingValue = `calc((100% - ${blok.width}) / 2)`;
+
+  const style = {
+    backgroundColor,
+    margin: `0 ${paddingValue}`,
+  };
+  console.log(blok.fontSize, 'fontsizeee');
   return (
-    <Richtext
-      {...storyblokEditable(blok)}
-      content={blok.content}
-      textAlign={blok.textAlign}
-      textColor={blok.colour}
-      fontSize={blok.fontSize}
-    />
+    <div style={style}>
+      <Richtext
+        {...storyblokEditable(blok)}
+        content={blok.content}
+        textAlign={blok.textAlign}
+        textColor={blok.colour}
+        fontSize={blok.fontSize}
+        fontWeights={blok.fontweight}
+      />
+    </div>
   );
 };
 
 export default Heading;
-
