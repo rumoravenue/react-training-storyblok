@@ -28,7 +28,6 @@ const Heading: React.FC<IProps> = ({ blok }) => {
     backgroundColor,
     margin: `0 ${paddingValue}`,
   };
-  console.log(blok.fontSize, 'fontsizeee');
   return (
     <div style={style}>
       <Richtext

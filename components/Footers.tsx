@@ -11,7 +11,6 @@ type FooterProps = {
   };
 };
 const Footer: FC<FooterProps> = ({ blok }) => {
-  console.log(blok);
   return (
     <div
       className='relative flex h-[1000px] w-full justify-center'

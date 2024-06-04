@@ -31,9 +31,6 @@ const Teaser: React.FC<IProps> = ({ blok }) => {
   const style: CSSProperties = {};
   backgroundcolur && (style.backgroundColor = backgroundcolur.color);
   textcolour && (style.color=textcolour.color);
-//   console.log("hello",textcolour,backgroundcolur)
-//   console.log("blok object:", blok);
-// console.log("backgroundcolour:", backgroundcolur);
 
   return (
     <div className={clsx(styles.teaser, styles[contentAlign])} style={style} {...storyblokEditable(blok)}>
