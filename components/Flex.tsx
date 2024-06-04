@@ -25,7 +25,6 @@ const Flex: FC<FlexProps> = ({ blok }) => {
     : 'transparent';
   const textColor = blok.textcolour ? blok.textcolour.color : 'white';
   const paddingValue = blok.width ? `calc((100% - ${blok.width}) / 2)` : '0';
-  console.log(blok.width, 'widthhh');
   const style = {
     backgroundColor,
     padding: `0 ${paddingValue}`,
