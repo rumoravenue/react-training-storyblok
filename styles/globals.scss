@@ -2,12 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
 html,
 body {
   padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  margin: 0 auto;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
 }
 
 a {
@@ -18,3 +31,52 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@layer base {
+  h1 {
+    @apply xxl:text-7xl xxxl:text-7xl text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
+  }
+  h2 {
+    @apply xxl:text-6xl xxxl:text-6xl text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl;
+  }
+  h3 {
+    @apply xxl:text-5xl xxxl:text-5xl text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl;
+  }
+  h4 {
+    @apply xxl:text-4xl xxxl:text-4xl text-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl;
+  }
+  h5 {
+    @apply xxl:text-3xl xxxl:text-3xl text-base sm:text-sm md:text-lg lg:text-xl xl:text-2xl;
+  }
+  h6 {
+    @apply xxl:text-2xl xxxl:text-2xl text-sm sm:text-base md:text-sm lg:text-lg xl:text-xl;
+  }
+}
+
+.text-stroke {
+  display: inline;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: #ffffffff;
+  -webkit-text-stroke-width: 1px;
+}
+
+.customer-services .listgroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.fontWeight600 {
+  font-weight: 600;
+}
+
+.fontWeight700 {
+  font-weight: 600;
+}
+.fontWeight900 {
+  font-weight: 600;
+}
+.font-famiy-Poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+// testimonial
