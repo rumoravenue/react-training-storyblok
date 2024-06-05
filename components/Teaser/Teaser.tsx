@@ -22,7 +22,7 @@ const Teaser: React.FC<teaserProps> = ({ blok }) => {
     headline,
     description,
     contentColor,
-    backgorundMedia,
+    backgorundMedia,    
     backgroundColor,
     alignment,
   } = blok;
@@ -53,7 +53,7 @@ const Teaser: React.FC<teaserProps> = ({ blok }) => {
         ) : null}
 
         <div className={styles.content}>
-          <h2 className='mb-10 text-2xl'>{headline}</h2>
+          <h2 className=' text-2xl'>{headline}</h2>
           <p>{description}</p>
         </div>
       </div>

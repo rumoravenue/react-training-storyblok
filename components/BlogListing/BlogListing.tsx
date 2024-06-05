@@ -3,9 +3,9 @@ import { ISbStoryData, SbBlokData, getStoryblokApi } from '@storyblok/react';
 import styles from './BlogListing.module.scss';
 import Link from 'next/link';
 
-interface StoriesData {
-  stories: ISbStoryData[];
-}
+  interface StoriesData {
+    stories: ISbStoryData[];
+  }
 
 const BlogListing = () => {
   const [data, setData] = useState<StoriesData | null>(null);
@@ -30,7 +30,7 @@ const BlogListing = () => {
     console.error('No blog posts found');
     return null;
   }
-
+        
   console.log(data);
 
   return (

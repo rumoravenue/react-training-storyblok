@@ -17,14 +17,11 @@ interface IProps {
 const BlogPost: React.FC<IProps> = ({ blok }) => (
   <main className='mt-4 text-center' {...storyblokEditable(blok)}>
     <h1>{blok.title}</h1>
-    <img
-      src={blok.media.filename}   
-      className='m-auto mt-3'      
-    />
+    <img src={blok.media.filename} className='m-auto mt-3' />
     <p>{blok.author.name}</p>
     <Richtext content={blok.content} />
-
   </main>
 );
 
 export default BlogPost;
+  

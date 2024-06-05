@@ -14,6 +14,7 @@ type RichtextProps = {
   content: ISbRichtext;
   textAlign?: TextAlign;
   textAlignSm?: TextAlign;
+  className?:string,
 };
 
 type ResolverProps = Record<string, unknown> & { _uid: string };

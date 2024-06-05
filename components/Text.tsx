@@ -1,5 +1,5 @@
 import { ISbRichtext, SbBlokData, storyblokEditable } from '@storyblok/react';
-import { TextAlign } from '../types';
+import { FontWeight, TextAlign } from '../types';
 import React from 'react';
 import { Richtext } from './Richtext';
 
@@ -7,6 +7,7 @@ interface TextProps extends SbBlokData {
   content?: ISbRichtext;
   textAlign?: TextAlign;
   textAlignSm?: TextAlign;
+
 }
 
 interface IProps {

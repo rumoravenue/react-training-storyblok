@@ -16,6 +16,12 @@ export default function Page({ story, locales, locale }) {
       <Head>
         <title>{story ? story.name : 'My Site'}</title>
         <link rel='icon' href='/favicon.ico' />
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel='preconnect' href='https://fonts.gstatic.com'  />
+        <link
+          href='https://fonts.googleapis.com/css2?family=Poppins&display=swap'
+          rel='stylesheet'
+        ></link>
       </Head>
       <Layout locales={locales} locale={locale}>
         <StoryblokComponent blok={story.content} locale={locale} />
@@ -35,7 +41,7 @@ export async function getStaticProps({
   let sbParams: ISbStoriesParams = {
     version: preview ? 'draft' : 'published',
     language: locale,
-    resolve_relations : ['blogPost.author']
+    resolve_relations: ['blogPost.author'],
   };
   const storyblokApi = getStoryblokApi();
   let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
@@ -69,4 +75,4 @@ export async function getStaticPaths({ locales }) {
     paths: paths,
     fallback: false,
   };
-} 
+}

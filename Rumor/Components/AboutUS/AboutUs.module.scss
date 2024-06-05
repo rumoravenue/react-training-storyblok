@@ -1,0 +1,38 @@
+.poppins
+{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    
+    
+}
+
+.aboutUs
+{
+    font-size: 3.2rem;
+    line-height: 3.2rem;
+    font-weight: 700;
+    
+}
+.trustedByUs::after
+{
+    content: '';
+    position: absolute;
+    bottom: -400%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 270.96px; 
+    border-bottom: 3px solid #000; 
+}
+.trustedByUs
+{
+    font-size: 1rem;
+    font-weight: 600;
+    position: relative;
+}
+.hireAnd
+{
+    font-weight:600;
+    text-align: center;
+    line-height: 2rem;
+    letter-spacing: 0.08rem;
+}
