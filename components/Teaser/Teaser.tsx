@@ -1,5 +1,5 @@
 import { SbBlokData, storyblokEditable } from '@storyblok/react';
-import { Asset } from '../../types';
+import { Asset, SBColor } from '../../types';
 import { CSSProperties } from 'react';
 import clsx from 'clsx';
 import styles from './Teaser.module.scss';
@@ -7,8 +7,8 @@ import styles from './Teaser.module.scss';
 interface SBTeaserProps extends SbBlokData {
   headline?: string;
   description?: string;
-  backroundColor?: string;
-  textColor?: string;
+  backroundColor?: SBColor;
+  textColor?: SBColor;
   contentAlign?: 'left' | 'right' | 'center';
   backroundMedia?: Asset;
 }
@@ -28,8 +28,8 @@ const Teaser: React.FC<IProps> = ({ blok }) => {
   } = blok;
 
   const style: CSSProperties = {};
-  blok.backroundColor && (style.backgroundColor = backroundColor);
-  textColor && (style.color = textColor);
+  blok.backroundColor && (style.backgroundColor = backroundColor.color);
+  textColor && (style.color = textColor.color);
 
   return (
     <div

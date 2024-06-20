@@ -6,3 +6,9 @@ export interface Asset {
   name?: string;
   title?: string;
 }
+
+export interface SBColor{
+  color:string;
+}
+
+export type TextAlign = 'left' | 'center' | 'right';

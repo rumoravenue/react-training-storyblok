@@ -4,12 +4,14 @@ import Feature from '../components/Feature';
 import Grid from '../components/Grid';
 import Page from '../components/Page';
 import Teaser from '../components/Teaser/Teaser';
+import Text from '../components/Text';
 
 const components = {
   feature: Feature,
   grid: Grid,
   teaser: Teaser,
   page: Page,
+  text: Text
 };
 
 storyblokInit({
@@ -30,5 +32,7 @@ storyblokInit({
   use: [apiPlugin],
   components,
 });
+
+
 
 export default MyApp;
