@@ -41,7 +41,7 @@ export async function getStaticProps({
   let sbParams: ISbStoriesParams = {
     version: preview ? 'draft' : 'published',
     language: locale,
-    resolve_relations: ['blogPost.author'],
+    resolve_relations: ['blogPost.author', 'blogPost.tags'],
   };
   const storyblokApi = getStoryblokApi();
   let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
